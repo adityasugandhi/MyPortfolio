@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./markdown.css";
+
+* {
+  font-family: "Hind";
+}
+
+body {
+  @apply dark:bg-black dark:text-white;
+  margin:10px
+}
+
+.gradient-circle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  top: -30px;
+  height: 40px;
+  width: 100vw;
+  opacity: 0.5;
+  filter: blur(40px);
+  background: radial-gradient(
+    circle,
+    rgba(248, 107, 223, 1) 0%,
+    rgba(107, 107, 248, 0.8) 100%
+  );
+}
+.gradient-circle-bottom {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  bottom: -20px;
+  height: 30px;
+  width: 100vw;
+  opacity: 0.5;
+  filter: blur(40px);
+  background: radial-gradient(
+    circle,
+    rgba(248, 107, 223, 1) 0%,
+    rgba(107, 107, 248, 0.8) 100%
+  );
+}
+
+.gradient-shadow:hover::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-45deg, #45caff 0%, #ff1b6b 100%);
+  transform: translate3d(0px, 20px, 0) scale(0.95);
+  filter: blur(20px);
+  opacity: var(0.7);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.gradient-shadow:hover::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+/* In your styles or global Tailwind CSS */
+.my-custom-macbook-scroll {
+  width: 600px; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  /* Add any other styling you want for the custom class */
+}
+
+.techscroll-container {
+ margin: 10px;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.revolving {
+  animation: spin 2.5s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 2s ease-out forwards;
+}
+.scroll {
+  @apply relative flex overflow-hidden w-fit;
+  /* width: 2000px; */
+  overflow: hidden;
+  max-width: 85vw; 
+  white-space: nowrap;
+  /* -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 50%, transparent); */
+  /* mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent); */
+  overflow: hidden;
+}
+
+/* .dark .scroll {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+} */
+
+
+.scroll div {
+  @apply whitespace-nowrap;
+  animation: scroll var(--time) linear infinite;
+  /* animation-delay: calc(var(--time) * -1); */
+}
+
+.scroll div:nth-child(2) {
+  animation: scroll2 var(--time) linear infinite;
+  /* animation-delay: calc(var(--time) / -4); */
+}
+
+
+.scroll .inversescroll{
+  
+  animation: inversescroll var(--time) linear infinite;
+  /* animation-delay: calc(var(--time) / -4); */
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+
+@keyframes inversescroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.scroll .inversescroll{
+  animation: inversescroll var(--time) linear infinite;
+  /* animation-delay: calc(var(--time) / -4); */
+}
+
+.scroll div span {
+  @apply inline-flex mob:m-1 desktop:m-2 desktop:p-2 tracking-wider   bg-slate-400  text-black dark:text-white  dark:bg-gray-600  py-2 px-2 mob:p-1 rounded transition-all;
+}
+
+.tech-icon {
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  flex: 0 0 auto; /* Prevent shrinking or growing */
+  margin: 0 10px; /* Optional: Adjust margin for spacing */
+}
+
+.scroll div span:hover {
+  @apply bg-blue-400 cursor-pointer;
+}
+
+
+.imgBox div {
+  @apply flex items-center justify-center w-fit;
+}
+
+.imgBox img {
+  
+  transform: scale(3.2);
+}
