@@ -28,7 +28,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid h-fit w-fit grid-cols-4 tablet:grid-cols-2 mob:grid-cols-2 desktop:grid-cols-3 py-10",
+        "grid h-fit w-fit grid-cols-4 tablet:grid-cols-2 mob:grid-cols-2 desktop:grid-cols-3 py-5",
         className
       )}
     >
@@ -62,7 +62,7 @@ export const HoverEffect = ({
             <Card theme={resolvedTheme} {...item}>
               <CardTitle theme={resolvedTheme}>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
-              <div className="absolute bottom-5 right-5 flex">
+              <div className="flex justify-end">
                 {item.url && (
                   <a
                     href={item.url}
@@ -125,7 +125,7 @@ export const Card = ({
           />
         </div>
       ) : imageSrc ? (
-        <div className="mb-4 justify-center">
+        <div className="mb-4 justify-center p-2">
           <Image
             src={imageSrc}
             alt=""
@@ -137,7 +137,7 @@ export const Card = ({
         </div>
       ) : null}
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="p-6">{children}</div>
       </div>
     </div>
   );
@@ -153,7 +153,7 @@ export const CardTitle = ({
   theme: string;
 }) => {
   return (
-    <h4 className={cn(`font-bold laptop:text-3xl tablet:text-l mobile:text-m tracking-wide mt-4`, className)}>
+    <h4 className={cn(`font-bold laptop:text-3xl tablet:text-l mobile:text-m tracking-wide mt-2`, className)}>
       {children}
     </h4>
   );
@@ -169,7 +169,7 @@ export const CardDescription = ({
   learnMoreLink?: string;
 }) => {
   return (
-    <div className="relative py-4">
+    <div className="relative py-1">
       <p
         className={cn(
           "my-8 text-zinc-40 opacity-25 hover:opacity-100 transition-opacity ease-in-out duration-300 tracking-wide leading-relaxed desktop:text-xl mob:text-md tablet:text-m",

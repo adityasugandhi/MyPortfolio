@@ -45,14 +45,14 @@
     {
       "id": "1",
       "title": "Network Simulation",
-      "description": "Architecting Connectivity: Orchestrating the Integration of Network Layers for Seamless Data Transmission",
+      "description": "Developed a  network simulation leveraging WebSockets for real-time communication, HashMap for caches, & ARP for resolving network addresses. The simulation includes bridges for network segmentation, routers for directing data packets, & switching mechanisms to ensure seamless transfer of data frames across the network",
       "imageSrc": "/projects/Networks.jpg",
       "url": "https://github.com/adityasugandhi/Network-Simulation",
       "Docs": "/Docs/Networking Wonderland.pdf"
     },
     {
       "id": "da5846b2-2868-404f-82fe-b26c9a34fc68",
-      "title": "Finding maximal & maximum clique in uncertain networks",
+      "title": "Finding maximal & maximum clique  in uncertain networks (Graphs)",
       "description": "Implemented Maximal Clique Algorithm for finding maximal & non-maximal clique in uncertain networks, datasets based on Social networks. such as LinkedIn, Facebook, Ask Ubuntu",
       "imageSrc": "/projects/earth.jpg",
       "url": "https://github.com/adityasugandhi/Improved-Algorithms-in-finding-maximal-and-maximum-clique-in-uncertain-networks",
@@ -76,7 +76,7 @@
       {
       "id": "5",
       "title": "Trained Text Generation Model",
-      "description": "Trained a text generation model using GPT-2 on a dataset of stock rules & articles from wall street. The model generates coherent and contextually relevant text based on the input prompt.",
+      "description": "Trained a text generation model based on `Attention is All you need` Paper, on a dataset of stock rules & articles from wall street. The model generates coherent and contextually relevant text based on the input prompt.",
       "imageSrc": "/projects/llm.png",
       "url": "https://github.com/Shazam6565/Shazam-GPT"
       },
@@ -110,7 +110,7 @@
       "description": "Revolutionize your AI solutions with our Personalized Language Models (LLM). Tailored to your unique needs, we deliver precision and relevance in language processing. From fine-tuning to bespoke models, elevate your applications with our cutting-edge Personalized LLM services for optimal performance."
     }
   ],
-  "aboutpara": "Hey there! Aditya here, a rockstar ‍ Software Engineer with 3+ years of building squeaky clean, super scalable code. ️✨\n\nCurrently chilling in sunny Tallahassee, FL ☀️, working as a Research Assistant at the Department of Scientific Computing (FSU). We're on a mission to predict monsoon forecasts for the Florida region using some seriously cool tech: Graph CNNs and 3D CNNs. Think analyzing a hundred years worth of data (1923-2023) from the whole world to predict monsoon season like a boss! ⛈️\n\nIt's not just a job, it's an adventure! #GNN's #WeatherModeling #large-scale data analysis #MonsoonMagic #FSU ⚡️",
+  "aboutpara": "Bringing Imagination to a code and code to reality. I am a Software Engineer, Data Scientist, and Product Designer with a passion for crafting innovative solutions!, Expertise in finding insights from data, designing scalable software solutions, and creating personalized language models. My Goals is to build products that aids humanity in reducing redudant work with the help of AI, ML and Software solution.",
   "resume": {
     "tagline": "👋 I'm a software engineer, product designer.",
     "description": "Software Engineer with 3+ years of industry experience, specializing in designing & developing scalable software solutions. Proficient in a wide range of programming languages & technologies. Seeking a challenging role to leverage technical expertise.",

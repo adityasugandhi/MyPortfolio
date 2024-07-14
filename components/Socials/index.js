@@ -6,7 +6,7 @@ import {useTheme} from "next-themes";
 
 const Socials = ({ className }) => {
   let { resolvedTheme } = useTheme();
-  console.log(resolvedTheme,"socials")
+  
   return (
     <div className={`${className} flex flex-wrap mob:flex-nowrap link`}>
       {yourData.socials.map((social, index) => (

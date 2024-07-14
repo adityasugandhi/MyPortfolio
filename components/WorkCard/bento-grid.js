@@ -39,7 +39,7 @@ export function GridBento({ img, name, description, onClick, youtubeId }) {
         >
           {youtubeId ? (
             // Embed YouTube video using iframe
-            console.log("YouTube video ID:", youtubeId),
+  
             <iframe
               className="rounded-xl"
               width="100%"

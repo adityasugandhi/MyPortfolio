@@ -45,8 +45,8 @@ export default function Home() {
       setIsLoading(false);
       setTimeout(() => {
         setShowContent(true);
-      }, 100); // Add a slight delay to ensure the class is added correctly
-    }, 2000); // Adjust the delay as needed
+      }, 300); // Add a slight delay to ensure the class is added correctly
+    }, 3000); // Adjust the delay as needed
   }, []);
   
   const handleWorkScroll = () => {
@@ -97,8 +97,8 @@ export default function Home() {
           <Image
             className="revolving"
             src="/logo/logo.png"
-            width={500}
-            height={500}
+            width={1024}
+            height={1024}
             alt="Logo"
           />
         </div>

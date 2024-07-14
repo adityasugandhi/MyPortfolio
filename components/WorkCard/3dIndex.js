@@ -43,7 +43,7 @@ export function ThreeDCardDemo({ img, name, description, onClick, youtubeId }) {
                     >
                         {youtubeId ? (
                             // Embed YouTube video using iframe
-                            console.log("YouTube video ID:", youtubeId),
+                            
                             <iframe className="rounded-xl"
                                 width="100%"
                                 height="400"

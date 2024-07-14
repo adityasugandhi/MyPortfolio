@@ -21,7 +21,7 @@ const Resume = () => {
   const isMobile = useMediaQuery({ maxWidth: 1200 }); 
   const size = isMobile ? "sm" : "md";
   const barSize = isMobile? "250px" : "200px";
-  console.log(resolvedTheme.resolvedTheme)
+  
   const themes = resolvedTheme.resolvedTheme === "dark" ? "dark" : "white";
   let bgcolor = resolvedTheme.resolvedTheme === "dark" ? "bg-slate-800" : "bg-gray-50";
   const navItems = [
@@ -31,7 +31,7 @@ const Resume = () => {
       
     },
   ]
-  console.log(bgcolor)
+  
   const generateRandomValue = () => {
       const random = Math.random();
       const scaled = random * (87 - 50) + 50;

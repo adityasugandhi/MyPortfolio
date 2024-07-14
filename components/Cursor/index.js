@@ -16,7 +16,7 @@ const Cursor = () => {
 
   useEffect(() => {
     setMount(true);
-    console.log("mount");
+    
   }, []);
 
   return (

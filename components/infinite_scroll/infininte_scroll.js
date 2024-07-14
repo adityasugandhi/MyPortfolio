@@ -60,7 +60,7 @@ useEffect(() => {
 
   const handleScroll = () => {
     const maxScrollLeft = scrollElement.scrollWidth / 2;
-    console.log(scrollElement.scrollLeft, maxScrollLeft);
+    
     if (scrollElement.scrollLeft >= maxScrollLeft) {
       scrollElement.scrollLeft = 0;
     }
