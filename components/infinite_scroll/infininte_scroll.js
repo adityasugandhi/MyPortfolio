@@ -73,7 +73,7 @@ useEffect(() => {
 }, []);
   return (
     <div className='scroll-container'>
-      <div className="scroll" style={{ '--time': '95s' }}>
+      <div className="scroll" style={{ '--time': '200s' }}>
         <div className="scroll-content">
           <span>CSS</span>
           <span>JavaScript</span>
@@ -135,7 +135,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="scroll imgBox" style={{ '--time': '60s' }}>
+      <div className="scroll imgBox" style={{ '--time': '200s' }}>
         <div className="inversescroll flex">
          {iconsArray.concat(iconsArray).map((icon, index)=> (
         <StackIcon
