@@ -112,11 +112,12 @@ body {
   animation: fade-in 2s ease-out forwards;
 }
 .scroll {
-  @apply relative flex overflow-hidden w-fit;
+  @apply relative flex  justify-center overflow-hidden desktop:w-screen  desktop:mr-10 mob:mr-10;
   /* width: 2000px; */
   overflow: hidden;
-  max-width: 85vw; 
+  max-width: 120vw;
   white-space: nowrap;
+  ;
   /* -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 50%, transparent); */
   /* mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent); */
   overflow: hidden;
@@ -129,8 +130,9 @@ body {
 
 
 .scroll div {
-  @apply whitespace-nowrap;
+  @apply whitespace-nowrap  mob:h-fit ;
   animation: scroll var(--time) linear infinite;
+  
   /* animation-delay: calc(var(--time) * -1); */
 }
 
@@ -147,7 +149,7 @@ body {
 }
 @keyframes scroll {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-30%);
   }
   100% {
     transform: translateX(100%);
@@ -159,14 +161,14 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-00%);
   }
 }
 
 
 @keyframes inversescroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(30%);
   }
   100% {
     transform: translateX(-100%);
@@ -176,11 +178,13 @@ body {
 
 .scroll .inversescroll{
   animation: inversescroll var(--time) linear infinite;
+  transition: all 0.3s ease-out;
   /* animation-delay: calc(var(--time) / -4); */
 }
 
 .scroll div span {
   @apply inline-flex mob:m-1 desktop:m-2 desktop:p-2 tracking-wider   bg-slate-400  text-black dark:text-white  dark:bg-gray-600  py-2 px-2 mob:p-1 rounded transition-all;
+  transition: all 0.3s ease-out;
 }
 
 .tech-icon {
@@ -197,7 +201,9 @@ body {
 
 .imgBox div {
   @apply flex items-center justify-center w-fit;
+  transition: all 0.3s ease-out;
 }
+
 
 .imgBox img {
   

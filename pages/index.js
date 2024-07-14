@@ -180,13 +180,13 @@ export default function Home() {
                   </Link>
                 </div>
               )}
-              <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
+              <div className="mt-10 laptop:mt-40 desktop:mr-20  mob:mr-10 p-2 laptop:p-0" ref={aboutRef}>
               <h1 className="tablet:m-10 text-4xl border-b-1 border-transparent hover:border-current transition-all ease-in">About</h1>
                 <p className="tablet:m-10 text-justify mt-2 text-xl laptop:text-3xl w-full laptop:w-5/5">
                   {data.aboutpara}
                 </p>
               </div>
-              <div className="w-fit h-full overflow-x-hidden ">
+              <div className="w-fit mobile:w-max h-full overflow-x-hidden ">
               <h1 className="tablet:m-10 text-4xl  border-b-1 border-transparent hover:border-current transition-all ease-in">Skills</h1>
 
 

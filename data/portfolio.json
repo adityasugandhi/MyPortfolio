@@ -71,7 +71,7 @@
       "id": "4",
       "title": "Monsoon Forecast Prediction",
       "description": "Predicting Monsoon Forecast for the Florida region using Graph CNNs and 3D CNNs. Analyzing a hundred years worth of data (1923-2023) from the whole world to predict monsoon season.",
-      "imageSrc": "/projects/gulfofmexico.jpg",
+      "imageSrc": "/projects/gulfofmexico.png",
       "url": "https://github.com/fsu-sc/MonsoonForecast"},
       {
       "id": "5",
@@ -84,7 +84,7 @@
       "id": "6",
       "title": "RAG Pdf Summarizer & Extractor",
       "description": "Developed a Pdf Summarizer & Extractor using RAG (Retrieval Augmented Generation) model. The model extracts the most relevant information from the pdf and generates a summary.",
-      "imageSrc": "/projects/rag.jpg",
+      "imageSrc": "/projects/rag.png",
       "url": "https://github.com/adityasugandhi/LLM_Playground"
       }
   ],

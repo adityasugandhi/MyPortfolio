@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{useEffect, useRef} from 'react';
+import { IconArrowRotaryStraight } from '@tabler/icons-react';
+
 import StackIcon from 'tech-stack-icons';
 
 const Techscroll = () => {
-
+const scrollRef = useRef(null);
 const iconsArray = [
   { name: "html5", className: "bg-white" },
-  { name: "css" },
+  { name: "css3" },
   { name: "js", className: "mob:mx-1" },
   { name: "reactjs", className: "mob:mx-1 tech-icon" },
   { name: "angular" },
@@ -14,7 +16,6 @@ const iconsArray = [
   { name: "flutter" },
   { name: "cloudflare" },
   { name: "netlify" },
-  { name: "vercel" },
   { name: "aws", className: "bg-white" },
   { name: "azure" },
   { name: "firebase" },
@@ -42,7 +43,6 @@ const iconsArray = [
   { name: "aws", className: "bg-white" },
   { name: "azure" },
   { name: "firebase" },
-  { name: "googlecloud" },
   { name: "github", className: "bg-white" },
   { name: "django" },
   { name: "java" },
@@ -53,6 +53,24 @@ const iconsArray = [
   { name: "mysql" },
   { name: "redis" }
 ];
+
+useEffect(() => {
+  const scrollElement = scrollRef.current;
+  if (!scrollElement) return;
+
+  const handleScroll = () => {
+    const maxScrollLeft = scrollElement.scrollWidth / 2;
+    console.log(scrollElement.scrollLeft, maxScrollLeft);
+    if (scrollElement.scrollLeft >= maxScrollLeft) {
+      scrollElement.scrollLeft = 0;
+    }
+  };
+
+  scrollElement.addEventListener('inversescroll', handleScroll);
+  return () => {
+    scrollElement.removeEventListener('inversescroll', handleScroll);
+  };
+}, []);
   return (
     <div className='scroll-container'>
       <div className="scroll" style={{ '--time': '95s' }}>
@@ -119,9 +137,9 @@ const iconsArray = [
 
       <div className="scroll imgBox" style={{ '--time': '60s' }}>
         <div className="inversescroll flex">
-          {iconsArray.map((icon, index) => (
+         {iconsArray.concat(iconsArray).map((icon, index)=> (
         <StackIcon
-          key={index} // Use a unique key for each element in the map function
+          key={index}
           name={icon.name}
           className= "tech-icon"/>
           ))}
