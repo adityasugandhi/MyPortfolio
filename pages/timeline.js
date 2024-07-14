@@ -85,7 +85,7 @@ const Timeline = ({ theme }) => {
             Built Enterprise web applications using ASP.NET and legacy frameworks.
             <div className="flex flex-row mt-5">
               <h6 className="mr-2">TechStack:</h6>
-              <StackIcons names={['aspnet', 'js', 'html5', 'csharp', 'sass']} />
+              <StackIcons names={['js', 'html5', 'csharp', 'sass']} />
             </div>
           </p>
         </VerticalTimelineElement>
