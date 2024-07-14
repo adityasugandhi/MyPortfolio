@@ -172,7 +172,7 @@ export const CardDescription = ({
     <div className="relative py-1">
       <p
         className={cn(
-          "my-8 text-zinc-40 opacity-25 hover:opacity-100 transition-opacity ease-in-out duration-300 tracking-wide leading-relaxed desktop:text-xl mob:text-md tablet:text-m",
+          "my-8 text-black-50 opacity-60 hover:opacity-100 transition-opacity ease-in-out duration-300 tracking-wide leading-relaxed desktop:text-xl mob:text-md tablet:text-m",
           className
         )}
       >
