@@ -68,7 +68,7 @@ export const HoverEffect = ({
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-3 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear mr-2"
+                    className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-3 mobile:p-1 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear mr-2"
                   >
                     Learn More
                   </a>
@@ -78,7 +78,7 @@ export const HoverEffect = ({
                     href={item.Docs}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear"
+                    className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] py-2 px-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear"
                   >
                     Docs
                   </a>
