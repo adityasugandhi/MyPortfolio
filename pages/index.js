@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       ) : (
         <div className= "opacity-0 animate-fade-in">
-          <TracingBeam className="px-2 mob:px-0 max-h-max ">
+          <TracingBeam className="px-2 mob:px-0 max-fit ">
             <Head>
               <title>{data.name}</title>
               <meta name="description" content={data.content} />
@@ -186,11 +186,11 @@ export default function Home() {
                   {data.aboutpara}
                 </p>
               </div>
-              <div className="w-fit mobile:w-max h-full overflow-x-hidden ">
-              <h1 className="tablet:m-10 text-4xl  border-b-1 border-transparent hover:border-current transition-all ease-in">Skills</h1>
-
-
-              <Techscroll />
+              <div className="w-full mobile:w-fit py-5 flex flex-col h-full items-center justify-center overflow-x-hidden ">
+              <h1 className="tablet:m-10 text-4xl py-2 border-b-1 border-transparent hover:border-current transition-all ease-in">Skills</h1>
+              
+              <Techscroll/>
+              
             </div>
 
               <Footer />

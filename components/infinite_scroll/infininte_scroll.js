@@ -1,7 +1,8 @@
-import React,{useEffect, useRef} from 'react';
+import React,{useEffect, useMemo,useState,useRef} from 'react';
 import { IconArrowRotaryStraight } from '@tabler/icons-react';
 
 import StackIcon from 'tech-stack-icons';
+import { func } from 'prop-types';
 
 const Techscroll = () => {
 const scrollRef = useRef(null);
@@ -19,7 +20,7 @@ const iconsArray = [
   { name: "aws", className: "bg-white" },
   { name: "azure" },
   { name: "firebase" },
-  { name: "googlecloud" },
+  
   { name: "github", className: "bg-white" },
   { name: "django" },
   { name: "java" },
@@ -30,7 +31,7 @@ const iconsArray = [
   { name: "mysql" },
   { name: "redis" },
   { name: "html5", className: "bg-white" },
-  { name: "css" },
+  
   { name: "js", className: "mob:mx-1" },
   { name: "reactjs", className: "mob:mx-1 tech-icon" },
   { name: "angular" },
@@ -39,7 +40,7 @@ const iconsArray = [
   { name: "flutter" },
   { name: "cloudflare" },
   { name: "netlify" },
-  { name: "vercel" },
+  
   { name: "aws", className: "bg-white" },
   { name: "azure" },
   { name: "firebase" },
@@ -54,88 +55,73 @@ const iconsArray = [
   { name: "redis" }
 ];
 
-useEffect(() => {
-  const scrollElement = scrollRef.current;
-  if (!scrollElement) return;
-
-  const handleScroll = () => {
-    const maxScrollLeft = scrollElement.scrollWidth / 2;
-    
-    if (scrollElement.scrollLeft >= maxScrollLeft) {
-      scrollElement.scrollLeft = 0;
-    }
-  };
-
-  scrollElement.addEventListener('inversescroll', handleScroll);
-  return () => {
-    scrollElement.removeEventListener('inversescroll', handleScroll);
-  };
-}, []);
+  const skills = useMemo(() => [
+    'CSS',
+    'JavaScript',
+    'ReactJS',
+    'Figma',
+    'Photoshop',
+    'Premiere Pro',
+    'Figma',
+    'Angular',
+    'Node JS',
+    'Express JS',
+    'MongoDB',
+    'PostgreSQL',
+    'GraphQL',
+    'REST API',
+    'Git',
+    'GitHub',
+    'Heroku',
+    'Netlify',
+    'VS Code',
+    'Codepen',
+    'aws',
+    'vercel',
+    'firebase',
+    'Azure',
+    'Google Cloud',
+    'Adobe XD',
+    'Illustrator',
+    'Flutter',
+  ], []);
+  
+  
+  const scrollWrapperRef = useRef(null);
+  
+  useEffect(() => {
+      const scroller = scrollWrapperRef.current;
+      function scroll() {
+        if(!scroller) return;
+        const innerScroll = scroller.querySelector('.scroll-content');
+        if(!innerScroll) return;
+        // if (innerScroll.getAttribute("data-clone") === "true") return
+        const innerScrollchildren = Array.from(innerScroll.children);
+        innerScrollchildren.forEach((child) => {
+          const duplicate = child.cloneNode(true);
+        innerScroll.appendChild(duplicate);
+        console.log(innerScrollchildren)})
+        // innerScroll.setAttribute("data-clone", "true");
+      }
+    scroll()}, []);
   return (
-    <div className='scroll-container'>
-      <div className="scroll" style={{ '--time': '200s' }}>
-        <div className="scroll-content">
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>ReactJS</span>
-          <span>Figma</span>
-          <span>Photoshop</span>
-          <span>Premiere Pro</span>
-          <span>Figma</span>
-          <span>Angular</span>
-          <span>Node JS</span>
-          <span>Express JS</span>
-          <span>MongoDB</span>
-          <span>PostgreSQL</span>
-          <span>GraphQL</span>
-          <span>REST API</span>
-          <span>Git</span>
-          <span>GitHub</span>
-          <span>Heroku</span>
-          <span>Netlify</span>
-          <span>VS Code</span>
-          <span>Codepen</span>
-          <span>aws</span>
-          <span>vercel</span>
-          <span>firebase</span>
-          <span>Azure</span>
-          <span>Google Cloud</span>
-          <span>Adobe XD</span>
-          <span>Illustrator</span>
-          <span>Flutter</span>
-          {/* Repeat the same items to create a seamless loop */}
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>ReactJS</span>
-          <span>Figma</span>
-          <span>Photoshop</span>
-          <span>Premiere Pro</span>
-          <span>Figma</span>
-          <span>Angular</span>
-          <span>Node JS</span>
-          <span>Express JS</span>
-          <span>MongoDB</span>
-          <span>PostgreSQL</span>
-          <span>GraphQL</span>
-          <span>REST API</span>
-          <span>Git</span>
-          <span>GitHub</span>
-          <span>Heroku</span>
-          <span>Netlify</span>
-          <span>VS Code</span>
-          <span>Codepen</span>
-          <span>aws</span>
-          <span>vercel</span>
-          <span>firebase</span>
-          <span>Azure</span>
-          <span>Google Cloud</span>
-          <span>Adobe XD</span>
-          <span>Illustrator</span>
-          <span>Flutter</span>
-        </div>
+    <div className="scroll-container ">
+      
+        <div className="scroll" style={{ '--time': '200s' } } ref={scrollWrapperRef}>
+          <div className="scroll-content">
+            {skills.map((skill, index) => (
+              <span key={index}>{skill}</span>
+            ))}
+         
+          </div> 
       </div>
+    
 
-      <div className="scroll imgBox" style={{ '--time': '200s' }}>
+
+
+    
+
+      <div className="scroll imgBox" style={{ '--time': '200s' }}  ref={scrollWrapperRef}>
         <div className="inversescroll flex">
          {iconsArray.concat(iconsArray).map((icon, index)=> (
         <StackIcon

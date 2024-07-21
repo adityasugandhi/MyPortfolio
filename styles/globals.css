@@ -68,7 +68,7 @@ body {
 .gradient-shadow:hover::after {
   content: "";
   z-index: -1;
-  position: absolute;
+  position: 1200px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -111,11 +111,22 @@ body {
 .animate-fade-in {
   animation: fade-in 2s ease-out forwards;
 }
-.scroll {
-  @apply relative flex  justify-center overflow-hidden desktop:w-screen  desktop:mr-10 mob:mr-10;
-  /* width: 2000px; */
+
+.scroll-container {
+  @apply flex justify-center items-center flex-col;
   overflow: hidden;
-  max-width: 120vw;
+  width: 100%;
+  max-width: 1200px;
+  /* align-items: center;  */
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+.scroll-container .scroll {
+  @apply relative flex flex-row  justify-center overflow-hidden desktop:w-screen;
+  /* width: 2000px; */
+  /* overflow: hidden; */
+  /* max-width: 750px; */
   white-space: nowrap;
   ;
   /* -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 50%, transparent); */
@@ -149,10 +160,10 @@ body {
 }
 @keyframes scroll {
   0% {
-    transform: translateX(30%);
+    transform: translateX(-30%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
 }
 
@@ -168,10 +179,10 @@ body {
 
 @keyframes inversescroll {
   0% {
-    transform: translateX(50%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
