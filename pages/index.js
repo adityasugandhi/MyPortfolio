@@ -156,7 +156,7 @@ export default function Home() {
                 </div>
                 <Socials className="pr-2 mt-2 laptop:mt-5" />
               </div>
-              <CountdownTimer targetDate={'2024-09-22T23:59:59'} />
+              {/* <CountdownTimer targetDate={'2024-09-22T23:59:59'} /> */}
               <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
                 <h1 className="text-4xl text-bold">Projects</h1>
                 <HoverEffect items={data.projects} />
