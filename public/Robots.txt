@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /api/
+Disallow: 
 Allow: /
 
 Sitemap: http://www.adityasugandhi.com/api/sitemap.xml
