@@ -108,6 +108,8 @@ export default function Home() {
             <Head>
               <title>{data.name}</title>
               <meta name="description" content={data.content} />
+              <meta name="keywords" content="Aditya Sugandhi, Software Engineer, Data Scientist, Web Development, Researcher" />
+              <link rel="canonical" href="https://adityasugandhi.com" />
             </Head>
             <SparklesCore
               id="tsparticlesfullpage"
