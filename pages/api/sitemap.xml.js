@@ -1,10 +1,18 @@
 // pages/api/sitemap.xml.js
 
+
+const getCurrentDate = () => {
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
 const generateSitemap = () => {
   const baseUrl = 'http://www.adityasugandhi.com';
   const pages = [
-    { loc: `${baseUrl}/index`, lastmod: '2024-07-01' },
-    { loc: `${baseUrl}/resume`, lastmod: '2024-07-01' },
+    { loc: `${baseUrl}/index`, lastmod: getCurrentDate() },
+    { loc: `${baseUrl}/resume`, lastmod: getCurrentDate() },
     // Add other pages dynamically here if needed
   ];
 

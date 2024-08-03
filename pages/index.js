@@ -84,7 +84,7 @@ export default function Home() {
     if (!isLoading) {
       stagger(
         [textOne.current, textTwo.current, textThree.current, textFour.current],
-        { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
+        { y: 40, x: -10, transform: "scale(0.95)" },
         { y: 0, x: 0, transform: "scale(1)" }
       );
     }
@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <>
       {isLoading ? (
-        <div className="flex items-center justify-center min-h-screen">
+        <div className="flex items-center justify-center min-h-screen  min-w-fit">
           <Image
             className="revolving"
             src="/logo/logo.png"
@@ -103,8 +103,8 @@ export default function Home() {
           />
         </div>
       ) : (
-        <div className= "opacity-0 animate-fade-in">
-          <TracingBeam className="px-2 mob:px-0 max-fit ">
+        <div className= "opacity-0 animate-fade-in max-h-screen max-w-screen">
+          <TracingBeam className="px-2 mob:px-0 ">
             <Head>
               <title>{data.name}</title>
               <meta name="description" content={data.content} />
