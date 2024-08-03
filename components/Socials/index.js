@@ -6,9 +6,9 @@ import {useTheme} from "next-themes";
 
 const Socials = ({ className }) => {
   let { resolvedTheme } = useTheme();
-  
+  console.log(resolvedTheme)
   return (
-    <div className={`${className} flex flex-wrap mob:flex-nowrap link`}>
+    <div className={`${className} flex flex-wrap mob:flex-nowrap`}>
       {yourData.socials.map((social, index) => (
         <Button key={index} onClick={() => window.open(social.link)}>
           <Image 
@@ -17,6 +17,7 @@ const Socials = ({ className }) => {
             width={30} 
             alt={social.title} 
           />
+
         </Button>
       ))}
     </div>

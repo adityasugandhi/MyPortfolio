@@ -5,11 +5,12 @@
 @import "./markdown.css";
 
 * {
-  font-family: "Hind";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+
 body {
-  @apply dark:bg-black dark:text-white;
+  @apply dark:bg-black dark:text-white ;
   margin:10px
 }
 
@@ -117,13 +118,14 @@ body {
   overflow: hidden;
   width: 100%;
   max-width: 1200px;
+  
   /* align-items: center;  */
   white-space: nowrap;
   -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
   mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
 }
 .scroll-container .scroll {
-  @apply relative flex flex-row  justify-center overflow-hidden desktop:w-screen;
+  @apply relative flex flex-row  justify-center overflow-hidden desktop:w-screen dark:bg-slate-100;
   /* width: 2000px; */
   /* overflow: hidden; */
   /* max-width: 750px; */
@@ -141,7 +143,7 @@ body {
 
 
 .scroll div {
-  @apply whitespace-nowrap  mob:h-fit ;
+  @apply whitespace-nowrap  mob:h-fit  rounded-lg;
   animation: scroll var(--time) linear infinite;
   
   /* animation-delay: calc(var(--time) * -1); */
@@ -194,7 +196,7 @@ body {
 }
 
 .scroll div span {
-  @apply inline-flex mob:m-1 desktop:m-2 desktop:p-2 tracking-wider   bg-slate-400  text-black dark:text-white  dark:bg-gray-600  py-2 px-2 mob:p-1 rounded transition-all;
+@apply inline-flex mob:m-1 desktop:m-2 desktop:p-2 tracking-wider   dark:bg-slate-800  py-2 px-2 mob:p-1 rounded transition-all;
   transition: all 0.3s ease-out;
 }
 
@@ -206,7 +208,7 @@ body {
 }
 
 .scroll div span:hover {
-  @apply bg-blue-400 cursor-pointer;
+  @apply dark:bg-gray-200 cursor-pointer;
 }
 
 
