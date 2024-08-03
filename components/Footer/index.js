@@ -1,8 +1,8 @@
 import React from "react";
 import Socials from "../Socials";
 import Link from "next/link";
-import Button from "../Button";
-
+// import Button from "../Button";
+import {Button} from  "@components/ui/movingborder"
 const Footer = () => {
   const calendarLink = 'https://outlook.office.com/bookwithme/user/9add25e1a57b41728c50fff069446682@fsu.edu?anonymous&ep=plink';
 
@@ -16,7 +16,7 @@ const Footer = () => {
              Hire Me!
             </h2>
             <div className="flex justify-center p-2">
-            <Button className="underline" type="primary" onClick={() => window.location.href = calendarLink}>
+            <Button className="underline underline-offset-2 transition-transform duration-300 transform hover:scale-110" type="primary" onClick={() => window.location.href = calendarLink}>
               <h1>Schedule a meeting</h1>
             </Button>
             </div>
