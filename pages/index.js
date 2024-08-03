@@ -99,7 +99,7 @@ export default function Home() {
             src="/logo/logo.png"
             width={1024}
             height={1024}
-            alt="Logo"
+            alt="Aditya Sugandhi - Building Software to accelerate productivity of Mankind"
           />
         </div>
       ) : (
