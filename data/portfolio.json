@@ -41,6 +41,14 @@
     }
   ],
   "projects": [
+    {
+      "id": "2",
+      "title": "Chatllama - An open-source project for conversational AI",
+      "description": "Chatllama is an open-source project that leverages open source models for conversational AI. It enables users to interact with a chatbot that can generate human-like responses. The project is built using React, Node.js, and the Ollama API for generating responses.",
+      "imageSrc": "/projects/chatllama.png",
+      "url": "https://discrete-dory-unduly.ngrok-free.app/"
+      
+    },
 
     {
       "id": "1",

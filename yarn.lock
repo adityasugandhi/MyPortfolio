@@ -5272,9 +5272,9 @@ caniuse-db@^1.0.30000054, caniuse-db@^1.0.30000132:
   integrity sha512-1SCff2e0RK+9FfcdEZoLEh0ZqB0FqCIArq8n7xP1/L0b8yCmMxiHQXj7oNAmacrWPVmvmsvzmNomD42HnKoWkQ==
 
 caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001587, caniuse-lite@^1.0.30001599:
-  version "1.0.30001610"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001610.tgz#2f44ed6e21d359e914271ae35b68903632628ccf"
-  integrity sha512-QFutAY4NgaelojVMjY63o6XlZyORPaLfyMnsl3HgnWdJUcX6K0oaJymHjH8PT5Gk7sTm8rvC/c5COUQKXqmOMA==
+  version "1.0.30001680"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001680.tgz"
+  integrity sha512-rPQy70G6AGUMnbwS1z6Xg+RkHYPAi18ihs47GH0jcxIG7wArmPgY3XbS2sRdBbxJljp3thdT8BIqv9ccCypiPA==
 
 ccount@^1.0.0, ccount@^1.0.3:
   version "1.1.0"
