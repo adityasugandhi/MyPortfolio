@@ -93,14 +93,16 @@ export default function Home() {
   return (
     <>
       {isLoading ? (
-        <div className="flex items-center justify-center min-h-screen  min-w-fit">
-          <Image
-            className="revolving"
-            src="/logo/logo.png"
-            width={1024}
-            height={1024}
-            alt="Aditya Sugandhi - Building Software to accelerate productivity of Mankind"
-          />
+        <div className="flex items-center justify-center min-h-screen min-w-fit">
+          <div className="relative w-40 h-40">
+            <Image
+              className="revolving"
+              src="/logo/Website-logo.png"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              alt="Aditya Sugandhi - Building Software to accelerate productivity of Mankind"
+            />
+          </div>
         </div>
       ) : (
         <div className= "opacity-0 animate-fade-in max-h-screen max-w-screen">

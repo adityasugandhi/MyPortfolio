@@ -99,6 +99,13 @@ body {
 
 .revolving {
   animation: spin 2.5s;
+  transform-origin: center center;
+  /* Ensure logo is properly centered for rotation */
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  max-width: 200px;
+  max-height: 200px;
 }
 @keyframes fade-in {
   0% {
